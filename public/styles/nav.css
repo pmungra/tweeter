@@ -22,9 +22,12 @@ nav {
   .write-new {
     display: flex;
     flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    margin-top: 30px;
+    padding: 1.5em;
   }
   
   i {
-  color: rgb(187, 255, 0);
-  margin-left: 45em;
+  color: yellowgreen;
   }
