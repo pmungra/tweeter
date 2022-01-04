@@ -13,6 +13,9 @@ html {
 /*
  * Global layout stuff
  */
+ font {
+  font-family: source Sans Pro;
+}
 
 body {
   color: #545149;
