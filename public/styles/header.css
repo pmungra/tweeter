@@ -1,10 +1,11 @@
-header {
+body > header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height:400px;
+  margin-top: 120px;
+  top: 400px;
   width: auto;
-  background-color: #faf7cd;
+  background-color: #facde4;
   background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
-} 
-  
+  }
