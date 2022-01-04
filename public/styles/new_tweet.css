@@ -15,3 +15,10 @@
   background-color: #40a158;
   color: #ecf4f1;
 } 
+
+.counter {
+  font-family: Bungee, sans-serif;
+  color: #545449;
+  margin-top: 0px;
+  float: right;
+} 
