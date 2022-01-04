@@ -5,7 +5,7 @@
  */
 
 $(document).ready(function() {
-const data = [
+/*const data = [
   {
     "user": {
       "name": "Newton",
@@ -28,7 +28,7 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+]*/
 
 const renderTweets = function(tweets) {
   // loops through tweets
@@ -36,9 +36,44 @@ const renderTweets = function(tweets) {
   // takes return value and appends it to the tweets container
   for (const tweet of tweets) {
     const newTweet = createTweetElement(tweet)
-        $('#tweets-container').append(newTweet);
+    $('#tweets-container').prepend(newTweet);
   }
 };
+
+$('.input').on('submit', function(event) {
+  event.preventDefault();
+  const tweetText = $(this).children('textarea').val();
+  console.log(tweetText);
+
+  if (!tweetText) {
+    alert('Tweet is empty!');
+
+  } else if (tweetText.length > 140) {
+    alert('Tweet is too long!');
+
+  } else { 
+
+    $.ajax('/tweets', {
+      data: $(this).serialize(),
+      method: 'POST'
+    });
+  }  
+
+})
+
+/*$.ajax('/tweets', {
+  data: $(this).serialize(),
+  method: 'POST'
+});*/
+
+const loadTweets = function () {
+  $.ajax('/tweets', {
+    method: 'GET',
+    dataType: 'JSON'
+  })
+    .then(tweets => renderTweets(tweets));
+};
+loadTweets();
 
 const createTweetElement = function(tweet) {
   // const $tweet = $(`<article class="tweet">Hello world</article>`);
