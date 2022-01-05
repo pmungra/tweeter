@@ -1,35 +1,72 @@
-nav {
-  font-family: 'Source Sans Pro', sans-serif;
+.nav {
+  background-color: #666973;
   height: 120px;
   width: auto;
-  background-color: #6ca140;
   color: #ffffff;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 400;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Bungee";
+  color: #ffffff;
+  font-size: larger;
+  margin: 1.5em;
+}
+
+.nav footer .write {
+  outline: none;
+  border: none;
+  background-color: #666973;
+  color: #ffffff;
+  font-family: 'Sans-serif';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5em;
+  font-size: 75%;
+  font-weight: 10%;
+}
+
+/* Animation Code */
+@keyframes bouncing-arrow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(+10px); }
+  100% { transform: translateY(0); }
+}
+
+.nav footer .fas {
+  color: #fa8072;
+  font-size: 1.8em;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.nav footer .fa-angle-double-down {
+  animation-name: bouncing-arrow;
+  animation-timing-function: ease;
+}
+
+@media only screen and (min-width:1024px) {
+  .nav {
+    background-color: #666973;
+    background-image: none;
+    height: 120px;
+    width: 100%;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .tweeter {  
-  font-family: 'bungee', cursive;
-  margin-left: 1.5em;
+  .nav footer .write {
+    background-color: #666973;
+    background-image: none;
   }
-  
-  .write-new {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: flex-end;
-    margin-top: 0px;
-    padding: 1.5em;
-  }
-  
-  button {
-    background-color: transparent;
-    border: none;
-    color: #ffe600
-    }
+}
