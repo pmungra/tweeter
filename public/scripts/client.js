@@ -5,6 +5,12 @@
  */
 
 $(document).ready(function() {
+
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.exampleTweet;
+  }
 /*const data = [
   {
     "user": {
@@ -31,6 +37,7 @@ $(document).ready(function() {
 ]*/
 
 const renderTweets = function(tweets) {
+  $('#tweets-container').empty();
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
@@ -56,6 +63,10 @@ $('.input').on('submit', function(event) {
     $.ajax('/tweets', {
       data: $(this).serialize(),
       method: 'POST'
+    })
+    .then(() => {
+      loadTweets();
+      $('#tweet-input').val('');
     });
   }  
 
@@ -81,10 +92,10 @@ const createTweetElement = function(tweet) {
     const exampleTweet = `<article class="tweet">
           <header>
             <img src= ${tweet.user.avatars}/>
-              <h4>${tweet.user.name}</h4>
-              <p>${tweet.user.handle}</p>
+            <h4>${escape(tweet.user.name)}</h4>
+            <p>${escape(tweet.user.handle)}</p>
           </header>
-          <p>${tweet.content.text}</p>
+          <p>${escape(tweet.content.text)}</p>
           <footer>
             <h5>${timeago.format(tweet.created_at)}</h5>
             <h5>flag retweet favorite</h5>
@@ -94,6 +105,5 @@ const createTweetElement = function(tweet) {
   return exampleTweet;
 };
 
-
-renderTweets(data);
+//renderTweets(data);
 });
