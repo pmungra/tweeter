@@ -19,24 +19,28 @@ const renderTweets = (tweets) => {
 //Submit Function
 $('.input').on('submit', (event) => {
   event.preventDefault();
-  const tweetText = $(this).children('textarea').val();
-  console.log(tweetText);
+  const tweetText = $('#tweet').val();
+  console.log("$('#tweet').val()", $('#tweet').val());
+  console.log('tweetText', tweetText);
 
   if (!tweetText) {
     alert('Tweet is empty!');
+
   } else if (tweetText.length > 140) {
     alert('Tweet is too long!');
-  } else { 
+
+  } else {
+
     $.ajax('/tweets', {
-      data: $(this).serialize(),
+      data: `text=${tweetText}`,
       method: 'POST'
     })
-    .then(() => {
-      loadTweets();
-      $('#tweet-input').val('');
-    });
-  };  
-});
+      .then(() => {
+        loadTweets();
+        $('#tweet-input').val('');
+        $('.counter').text('140');
+      });
+  };
 
 //Load Tweet Function
 const loadTweets = () => {
@@ -57,11 +61,15 @@ const createTweetElement = (tweet) => {
       <p>${escape(tweet.user.handle)}</p>
     </header>
       <p>${escape(tweet.content.text)}</p>
-    <footer>
-    <h5>${timeago.format(tweet.created_at)}</h5>
-      <h5>flag retweet favorite</h5>
+    <footer class="timeago">
+      <div>${timeago.format(tweet.created_at)}</div>
+      <span>
+      <i class="fas fa-flag"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="fas fa-heart"></i>
+    </span>
     </footer>
-    </article>`
+  </article>`;
 
   return exampleTweet;
 };
