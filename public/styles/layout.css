@@ -3,26 +3,87 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+
+ html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
- font {
-  font-family: source Sans Pro;
+nav {
+  font-family: "Source Sans Pro";
 }
 
 body {
-  color: #267575;
-  background-color: #ecf4ef;
+  color: #dac344;
+  background-color: #c6db3c;
+  font-family: "Source Sans Pro", "sans-serif";
   font-size: 24px;
+  margin-top: 120px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+ .container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  width: 90%;
+}
+
+article {
+  align-items: column;
+  border: solid;
+  margin-bottom: 0.5em;
+}
+
+.scroll-to-top button {
+  outline: none;;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 3.5em;
+  z-index: 99;
+  border: none;
+  background-color: #f8fa72;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.scroll-to-top button:hover {
+  box-shadow: 4px 4px rgb(128, 128, 128);
+}
+
+.scroll-to-top button .fas {
+  color: rgb(255, 255, 255);
+}
+
+@media only screen and (min-width:1024px) {
+
+  body {
+    padding-top: 3em;
+    display: flex;
+    align-content: space-around;
+  }
+
+  body .container {
+    object-fit: fill;
+    width: 50%;
+    margin-right: 2em;
+  }
+}
