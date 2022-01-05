@@ -1,8 +1,8 @@
-.nav {
-  background-color: #666973;
+.nav-Bar {
+  background-color: #909197e3;
   height: 120px;
   width: auto;
-  color: #ffffff;
+  color: #cdcf33;
   position: fixed;
   top: 0;
   display: flex;
@@ -17,7 +17,7 @@
   margin: 1.5em;
 }
 
-.nav footer .write {
+.nav-Bar footer .write {
   outline: none;
   border: none;
   background-color: #666973;
@@ -38,26 +38,26 @@
   100% { transform: translateY(0); }
 }
 
-.nav footer .fas {
-  color: #fa8072;
+.nav-Bar footer .fas {
+  color: #48bb2b;
   font-size: 1.8em;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   transform-origin: bottom;
 }
 
-.nav footer .fa-angle-double-down {
+.nav-Bar footer .fa-angle-double-down {
   animation-name: bouncing-arrow;
   animation-timing-function: ease;
 }
 
 @media only screen and (min-width:1024px) {
-  .nav {
-    background-color: #666973;
+  .nav-Bar {
+    background-color: #73856e;
     background-image: none;
     height: 120px;
     width: 100%;
-    color: #ffffff;
+    color: #8cb98377;
     position: fixed;
     top: 0;
     display: flex;
@@ -65,8 +65,8 @@
     align-items: center;
   }
 
-  .nav footer .write {
-    background-color: #666973;
+  .nav-Bar footer .write {
+    background-color: #e1e2b4f8;
     background-image: none;
   }
 }
