@@ -17,8 +17,8 @@ nav {
 }
 
 body {
-  color: #dac344;
-  background-color: #c6db3c;
+  color: #55ac1b;
+  background-color: #eff0e8;
   font-family: "Source Sans Pro", "sans-serif";
   font-size: 24px;
   margin-top: 120px;
@@ -59,14 +59,14 @@ article {
   right: 3.5em;
   z-index: 99;
   border: none;
-  background-color: #f8fa72;
+  background-color: #b6df88;
   cursor: pointer;
   padding: 20px;
   border-radius: 100%;
 }
 
 .scroll-to-top button:hover {
-  box-shadow: 4px 4px rgb(128, 128, 128);
+  box-shadow: 4px 4px rgb(157, 167, 74);
 }
 
 .scroll-to-top button .fas {
