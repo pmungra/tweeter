@@ -4,8 +4,8 @@
 #Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 $(document).ready(() => {
-//responsible for returning a tweet <article>
-//Create New Tweet Element Function
+//responsible for returning a tweet <article>/Dynamic tweet
+//Implemented New Tweet Element Function
 const createTweetElement = (tweet) => {
 const exampleTweet = `<article class="tweet">
   <header>
@@ -28,6 +28,9 @@ const exampleTweet = `<article class="tweet">
       
 //Render New Tweets Function, need to prepend to see latest tweets first 
   const renderTweets = (tweets) => {
+// loops through tweets
+// calls createTweetElement for each tweet
+// takes return value and appends it to the tweets container    
     $('#tweets-container').empty();
     for (const tweet of tweets) {
     const newTweet = createTweetElement(tweet);
@@ -75,7 +78,7 @@ const loadTweets = () => {
       
 loadTweets();
 
-//helper escape function
+//Method:2 helper escape function
 const escape = str => {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
