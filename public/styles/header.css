@@ -8,3 +8,11 @@ body > header {
   width: auto;
   background-color: #e2e631;
   }
+
+@media only screen and (min-width: 1024px) { 
+  .mainheader {
+  float: left;
+  width: 28vw;
+  margin: 5.5em 0.5em 0.5em 1.5em;
+  }
+}
