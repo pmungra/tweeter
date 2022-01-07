@@ -1,5 +1,8 @@
 $(document).ready(function() {
-  // --- our code goes here ---
+// --- our code goes here ---
+
+const $textArea = $('.new-tweet textarea');  
+
 //create new variable
 $textArea.on('keyup', function() {
 
@@ -14,7 +17,7 @@ const remainingCharCount = 140 - $(this).val().length;
 $charCounter.text(remainingCharCount);
   if (remainingCharCount < 0) {
     $charCounter.addClass('over-char-limit');
-    // Adds the class to each element in the set of matched elements.
+    // Adds the class to each element 
   } else {
     $charCounter.removeClass('over-char-limit');
   }  
