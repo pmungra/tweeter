@@ -3,14 +3,10 @@
 #jQuery is already loaded
 #Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
-
 $(document).ready(() => {
-
 //responsible for returning a tweet <article>
 //Create New Tweet Element Function
-
 const createTweetElement = (tweet) => {
-
 const exampleTweet = `<article class="tweet">
   <header>
     <img src= ${escape(tweet.user.avatars)}/>
@@ -31,7 +27,6 @@ const exampleTweet = `<article class="tweet">
 };
       
 //Render New Tweets Function, need to prepend to see latest tweets first 
-  
   const renderTweets = (tweets) => {
     $('#tweets-container').empty();
     for (const tweet of tweets) {
@@ -42,8 +37,7 @@ const exampleTweet = `<article class="tweet">
     
   $('.fa-angle-double-down').on('click', (event) => { $('#tweet').focus() });
 
-//Tweet Button : Submit Function
-  
+//Tweet Button/Submit Function
   $('.input').on('submit', (event) => {
     event.preventDefault();
     $('.error').hide();
@@ -71,7 +65,6 @@ const exampleTweet = `<article class="tweet">
   });
       
 //Load Tweets Function
-  
 const loadTweets = () => {
   $.ajax('/tweets', {
     method: 'GET',
@@ -82,7 +75,7 @@ const loadTweets = () => {
       
 loadTweets();
 
-//helper function
+//helper escape function
 const escape = str => {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
