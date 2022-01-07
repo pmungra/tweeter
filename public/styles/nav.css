@@ -1,23 +1,39 @@
 nav {
-  position: absolute;
-  font-family: 'Source Sans Pro', sans-serif;
-  height: 120px;
-  width: auto;
   background-color: #666973;
   color: #ffffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5em;
+  height: 120px;
+  width: auto;
   z-index: 400;
-  }
-  span {
-  font-family: 'bungee', cursive;
-  margin-left: 1.5em;
-  }
-
-  .test {
-  text-align: right;
-  margin-right: 1.5em;  
-  }
-
-  i {
-  color: rgb(187, 255, 0);
-  margin-left: 45em;
-  }
+  position: fixed;
+}
+    
+  
+nav span:nth-child(1) {
+  font-family: Bungee, sans-serif;
+  float: left;
+  font-size: 1.5em;
+}
+    
+   
+nav span:nth-child(2) {
+  position: absolute;
+  right: 1.5em;
+  top: 1.5em;
+}
+    
+nav i {
+  position: absolute;
+  right: 50%;
+  bottom: -1.5em;
+  color: #ffffff;
+}
+    
+nav i:hover {
+  color:#ffffff;
+  font-size: 1.3em;
+  bottom: -1.3em;
+}
