@@ -37,7 +37,8 @@ const exampleTweet = `<article class="tweet">
      $('#tweets-container').prepend(newTweet);
     };
   };
-    
+
+// toggle button for getting to the top of the screen
   $('.fa-angle-double-down').on('click', (event) => { $('#tweet').focus() });
 
 //Tweet Button/Submit Function
