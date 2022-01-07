@@ -22,3 +22,9 @@ body {
   flex-direction: column;
   margin: 0px 50px 50px 50px;
 }
+
+@media only screen and (min-width: 1024px) {
+  .container {
+  float: right;
+  width: 85vh;
+}
