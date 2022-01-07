@@ -1,72 +1,23 @@
-.nav-Bar {
-  background-color: #909197e3;
+nav {
+  position: absolute;
+  font-family: 'Source Sans Pro', sans-serif;
   height: 120px;
   width: auto;
-  color: #cdcf33;
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-family: "Bungee";
-  color: #ffffff;
-  font-size: larger;
-  margin: 1.5em;
-}
-
-.nav-Bar footer .write {
-  outline: none;
-  border: none;
   background-color: #666973;
-  color: #48bb2b;
-  font-family: 'Sans-serif';
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 4em;
-  font-size: 90%;
-  font-weight: 10%;
-}
-
-/* Animation Code */
-@keyframes bouncing-arrow {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(+10px); }
-  100% { transform: translateY(0); }
-}
-
-.nav-Bar footer .fas {
-  color: #48bb2b;
-  font-size: 1.8em;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  transform-origin: bottom;
-}
-
-.nav-Bar footer .fa-angle-double-down {
-  animation-name: bouncing-arrow;
-  animation-timing-function: ease;
-}
-
-@media only screen and (min-width:1024px) {
-  .nav-Bar {
-    background-color: #73856e;
-    background-image: none;
-    height: 120px;
-    width: 100%;
-    color: #8cb98377;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  color: #ffffff;
+  z-index: 400;
+  }
+  span {
+  font-family: 'bungee', cursive;
+  margin-left: 1.5em;
   }
 
-  .nav-Bar footer .write {
-    background-color: #e2e2caf8;
-    background-image: none;
+  .test {
+  text-align: right;
+  margin-right: 1.5em;  
   }
-}
+
+  i {
+  color: rgb(187, 255, 0);
+  margin-left: 45em;
+  }
