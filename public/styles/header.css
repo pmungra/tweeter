@@ -7,7 +7,9 @@ body > header {
   top: 400px;
   width: auto;
   background-color: #e2e631;
-  }
+  background-color: #eef10a;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+}
 
 @media only screen and (min-width: 1024px) { 
   .mainheader {
