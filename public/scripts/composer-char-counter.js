@@ -1,9 +1,10 @@
 $(document).ready(function() {
 // --- our code goes here ---
 
+//create new variable
 const $textArea = $('.new-tweet textarea');  
 
-//create new variable
+//to detect lenghth of text area
 $textArea.on('keyup', function() {
 
 //Adeed  new variable  $charCounter to count character in text area
